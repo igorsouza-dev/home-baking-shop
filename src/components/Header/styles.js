@@ -3,24 +3,51 @@ import styled from 'styled-components';
 export const HeaderWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+
   margin-left: 10%;
   margin-right: 5%;
+  padding-top: 30px;
   background: var(--primary);
 `;
 
 export const MenuWrapper = styled.nav`
-  display: flex;
-  flex-direction: row;
+  width: 80%;
+  max-width: 700px;
+  padding-left: 5%;
 
   ul {
+    display: flex;
+    flex: 3;
+    flex-direction: row;
     list-style: none;
-    li {
-      a {
-        color: #fff;
+    padding: 10px;
 
-        &:hover {
+    li {
+      margin: 0 5%;
+
+      a {
+        color: var(--text);
+        font-weight: 400;
+        transition: all ease-in-out 250ms;
+        &::after {
+          content: '';
+          margin: 10px auto 0 auto;
+          display: block;
+          width: 0%;
+          height: 2px;
+          background: var(--accent);
+          transition: all 250ms ease-in-out;
+        }
+        &.active {
           color: var(--accent);
+          font-weight: 700;
+          &::after {
+            width: 100%;
+          }
+        }
+
+        &:hover::after {
+          width: 100%;
         }
       }
     }
@@ -29,11 +56,19 @@ export const MenuWrapper = styled.nav`
 
 export const LogoWrapper = styled.div`
   display: flex;
+
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 50px;
+  }
   div {
+    margin-left: 5px;
     display: flex;
     flex-direction: column;
-    color: var(--accent);
+    color: var(--text);
   }
 `;
 export const CartButton = styled.button`

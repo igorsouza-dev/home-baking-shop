@@ -17,6 +17,7 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     --primary: #28292d;
     --accent: #f8dd17;
+    --text: #e6e6e6;
     background: var(--primary);
   }
   body, input, button, textarea {
