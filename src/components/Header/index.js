@@ -1,10 +1,14 @@
 import React from 'react';
+import { ShoppingCart } from '@styled-icons/material-outlined/ShoppingCart';
+
 import * as S from './styles';
+import profilePhoto from '../../assets/profile-photo.png';
+import logo from '../../assets/logo.svg';
 
 const Header = () => (
   <S.HeaderWrapper>
     <S.LogoWrapper>
-      <img src="" alt="logo" />
+      <img src={logo} alt="logo" />
       <div>
         <strong>MORGHYLIS</strong>
         <small>bakery</small>
@@ -13,7 +17,9 @@ const Header = () => (
     <S.MenuWrapper>
       <ul>
         <li>
-          <a href="/">Home</a>
+          <a href="/" className="active">
+            Home
+          </a>
         </li>
         <li>
           <a href="/menu">Menu</a>
@@ -28,9 +34,9 @@ const Header = () => (
     </S.MenuWrapper>
     <S.CartWrapper>
       <button type="button" onClick={() => {}}>
-        Cart
+        <ShoppingCart color="var(--text)" size={30} />
       </button>
-      <img src="" alt="avatar" />
+      <img src={profilePhoto} alt="avatar" />
     </S.CartWrapper>
   </S.HeaderWrapper>
 );
