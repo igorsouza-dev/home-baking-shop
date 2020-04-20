@@ -1,6 +1,8 @@
 import React from 'react';
 import * as S from './styles';
 
+const cartItemsCount = 3;
+
 const Header = () => (
   <S.HeaderWrapper>
     <S.LogoWrapper>
@@ -27,10 +29,10 @@ const Header = () => (
       </ul>
     </S.MenuWrapper>
     <S.CartWrapper>
-      <button type="button" onClick={() => {}}>
-        Cart
-      </button>
-      <img src="" alt="avatar" />
+      <S.CartButton type="button" onClick={() => {}} items={cartItemsCount}>
+        <ShoppingCart color="var(--text)" size={30} />
+      </S.CartButton>
+      <img src={profilePhoto} alt="avatar" />
     </S.CartWrapper>
   </S.HeaderWrapper>
 );
